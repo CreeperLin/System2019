@@ -1,0 +1,3 @@
+[submodule "pintos"]
+	path = pintos
+	url = https://github.com/CreeperLin/pintos.git
