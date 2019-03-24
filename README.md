@@ -6,10 +6,6 @@ Stay tuned
 
 ## Assignments
 
-### Warmup exercises
-
-(TBD)
-
 ### PintOS
 
 A small and simple operating system that runs on x86 machines and simulators.
@@ -23,17 +19,17 @@ A small and simple operating system that runs on x86 machines and simulators.
 - QEMU: fast x86 simulation with binary translation, but only supports real-time mode
 - Bochs: slower simulation but supports real-time and reproducible mode
 
-To install Bochs, download the Bochs source and run
+To install Bochs, make sure the following library is installed:
 
-    ./configure --with-x --with-x11 --with-term --with-nogui --enable-gdb-stub
+- libncurses5-dev
 
-Then run
+Then under src/misc, run
 
-    make install
+    sudo ./bochs-2.6.2-build.sh /usr/
 
 ### Usage
 
-First build the pintos utility tools. Under src/utils,
+First build the pintos utility tools. Under src/utils/,
 
     make
     export PATH=$PATH:`pwd`
@@ -44,7 +40,7 @@ The following tools are available:
 - pintos-gdb: launch gdb to debug the kernel
 - backtrace: converting raw addresses into symbolic backtraces
 
-For each project directory (threads, userprog, vm, filesys),
+In each project directory (threads, userprog, vm, filesys),
 
 to build the project, run
 
@@ -77,6 +73,10 @@ in the gdb prompt, run
 
 the gdb is now connected to the kernel
 
+to run all the tests and see your grade, run
+
+    make grade
+
 ### Projects
 
 #### Threads
@@ -86,17 +86,6 @@ See [JHU CS 318 Project 1](https://www.cs.jhu.edu/~huang/cs318/fall17/project/pr
 - alarm clock
 - priority scheduling
 - advanced scheduler
-
-Objectives:
-
-- pass all the tests
-- write a design document
-
-Your document shall include:
-
-- design of timer_sleep()
-- design of the scheduler
-- advantage & disadvantages of your design
 
 #### User Programs
 
@@ -108,11 +97,30 @@ Your document shall include:
 
 #### File Systems
 
-(TBD)
+(bonus)
 
 #### Additional features
 
+(bonus)
+
+#### Design documents
+
+You need to write design documents on your project.
+
+Either documents on each part or documents on the project as a whole are acceptable.
+
+Your documents shall include:
+
+- Design for each part of the project.
+- advantage & disadvantages of your design.
+
 ### Submission
+
+For each project group:
+
+- Place your code in a private github repository.
+- Add creeperlin as collabrator and grant read permission.
+- Fill up the group infromation in this [form.](https://shimo.im/sheets/FOQMFyh7ovU8SPeW)
 
 ## References
 
@@ -123,3 +131,5 @@ Your document shall include:
 [Stanford CS 140 Pintos Project](https://web.stanford.edu/class/cs140/projects/pintos/pintos.html)
 
 ## Notes
+
+- Get github student pack to create unlimited private repositories.
