@@ -22,6 +22,8 @@ A small and simple operating system that runs on x86 machines and simulators.
 To install Bochs, make sure the following library is installed:
 
 - libncurses5-dev
+- libx11-dev
+- libxrandr-dev
 
 Then under src/misc, run
 
@@ -33,6 +35,8 @@ First build the pintos utility tools. Under src/utils/,
 
     make
     export PATH=$PATH:`pwd`
+
+make sure it is in your PATH environment variable before continuing
 
 The following tools are available:
 
@@ -54,28 +58,41 @@ the following files can be found in folder 'build/'
 - kernel.img: image of boot partition
 - loader.bin: compiled bootloader
 - loader.asm: decompilation of bootloader
+- pintos.sh: wrapper script for running pintos
 
-to run simulation (here using Bochs and no VGA), run
+to run pintos in simulation (here using Bochs and no VGA), run
 
-    pintos -v --bochs -- -q run <testcase_name>
+    pintos -v --bochs
 
-to debug the kernel, run
+to run all the tests and see your grade, run
 
-    pintos -v --bochs --gdb -- -q run <testcase_name>
+    make check
 
-in a new terminal under 'build/', run
+to run a single test, make the '.result' file from 'build/', e.g.
+
+    make tests/threads/alarm-multiple.result
+
+or use the wrapper script provided
+
+    ./pintos.sh run alarm-multiple
+
+to debug a single test,
+
+    make tests/threads/alarm-multiple.result PINTOSOPTS='--gdb' VERBOSE=1
+
+or use the wrapper script provided
+
+    ./pintos.sh debug alarm-multiple
+
+in a new terminal still under 'build/', run
 
     pintos-gdb kernel.o
 
-in the gdb prompt, run
+and in the gdb prompt, run
 
     debugpintos
 
 the gdb is now connected to the kernel
-
-to run all the tests and see your grade, run
-
-    make grade
 
 ### Projects
 
@@ -118,7 +135,7 @@ Your documents shall include:
 
 For each project group:
 
-- Place your code in a private github repository.
+- Fork or pull this repository to your private github repository.
 - Add creeperlin as collabrator and grant read permission.
 - Fill up the group infromation in this [form.](https://shimo.im/sheets/FOQMFyh7ovU8SPeW)
 
