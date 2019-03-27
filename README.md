@@ -4,6 +4,13 @@ Project resources for System(II) 2019 Spring
 
 Stay tuned
 
+## Syncing with this repo
+
+on top of your own repository, run
+
+    git pull https://github.com/CreeperLin/System2019
+    git submodule update
+
 ## Assignments
 
 ### PintOS
