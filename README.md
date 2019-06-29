@@ -113,30 +113,38 @@ See [JHU CS 318 Project 1](https://www.cs.jhu.edu/~huang/cs318/fall17/project/pr
 
 #### User Programs
 
-(TBD)
+See [JHU CS 318 Project 2](https://www.cs.jhu.edu/~huang/cs318/fall17/project/project2.html) for details.
 
 #### Virtual Memory
 
-(TBD)
+See [JHU CS 318 Project 3](https://www.cs.jhu.edu/~huang/cs318/fall17/project/project3.html) for details.
 
 #### File Systems
 
 (bonus)
 
+See [JHU CS 318 Project 4](https://www.cs.jhu.edu/~huang/cs318/fall17/project/project4.html) for details.
+
 #### Additional features
 
 (bonus)
 
-#### Design documents
+#### Documents
 
-You need to write design documents on your project.
+You need to write documents on your project.
 
 Either documents on each part or documents on the project as a whole are acceptable.
 
-Your documents shall include:
+Your documents must include:
 
-- Design for each part of the project.
+- name of contributors and their contributions
+- length of time spent on each labs
+
+Your documents may include:
+
+- design for each part of the project.
 - advantage & disadvantages of your design.
+- difficulties & solutions
 
 ### Submission
 
@@ -145,6 +153,7 @@ For each project group:
 - Fork or pull this repository to your private github repository.
 - Add creeperlin as collabrator and grant read permission.
 - Fill up the group infromation in this [form.](https://shimo.im/sheets/FOQMFyh7ovU8SPeW)
+- make sure your repo has a pintos source folder named 'src', and put your documents in top-level directory or 'docs' folder.
 
 ## References
 
